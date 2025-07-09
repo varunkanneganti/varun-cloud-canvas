@@ -137,10 +137,13 @@ export const ContactSection = () => {
 
           {/* Contact Form */}
           <div className="lg:col-span-2">
-            <div className="card-modern p-8">
+            <div className="card-modern p-8 relative overflow-hidden">
+              {/* Background decoration */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/5 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
+              
               <h3 className="text-xl font-semibold text-foreground mb-6">Send a Message</h3>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
@@ -205,9 +208,10 @@ export const ContactSection = () => {
                   />
                 </div>
                 
-                <Button type="submit" className="btn-primary w-full group">
+                <Button type="submit" className="btn-primary w-full group relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  Send Message
+                  <span className="relative z-10">Send Message</span>
                 </Button>
               </form>
             </div>
