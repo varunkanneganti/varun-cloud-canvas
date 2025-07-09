@@ -15,7 +15,7 @@ export const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 20);
       
       // Update active section based on scroll position
       const sections = navItems.map(item => item.href.substring(1));
@@ -47,24 +47,26 @@ export const Navigation = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? "bg-background/90 backdrop-blur-md shadow-soft" 
+        ? "nav-blur shadow-lg" 
         : "bg-transparent"
     }`}>
-      <div className="max-w-6xl mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          <div className="text-xl font-bold bg-gradient-hero bg-clip-text text-transparent hover:scale-110 transition-transform duration-300 cursor-pointer">
-            VK
+      <div className="section-container">
+        <div className="flex items-center justify-between h-16 px-6">
+          {/* Logo */}
+          <div className="flex items-center">
+            <div className="text-2xl font-bold bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent hover:scale-110 transition-transform duration-300 cursor-pointer">
+              VK
+            </div>
           </div>
           
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className={`text-sm font-medium transition-all duration-300 hover:text-primary hover:scale-105 hover-underline relative ${
-                  activeSection === item.href.substring(1)
-                    ? "text-primary"
-                    : "text-foreground/70"
+                className={`nav-item ${
+                  activeSection === item.href.substring(1) ? "active" : ""
                 }`}
               >
                 {item.name}
@@ -72,7 +74,10 @@ export const Navigation = () => {
             ))}
           </div>
           
-          <ThemeToggle />
+          {/* Theme Toggle */}
+          <div className="flex items-center">
+            <ThemeToggle />
+          </div>
         </div>
       </div>
     </nav>

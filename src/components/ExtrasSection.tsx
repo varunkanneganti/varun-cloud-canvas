@@ -4,55 +4,77 @@ const activities = [
   {
     icon: Users,
     title: "Sports Leadership",
-    description: "Captain of university basketball team, leading team strategy and fostering collaborative excellence both on and off the court."
+    description: "Captain of university basketball team, leading team strategy and fostering collaborative excellence both on and off the court.",
+    achievement: "Team Captain",
+    year: "2023-2024"
   },
   {
     icon: Trophy,
     title: "Technical Fest Winner",
-    description: "First place in inter-college hackathon for developing an innovative IoT solution for smart campus management."
+    description: "First place in inter-college hackathon for developing an innovative IoT solution for smart campus management.",
+    achievement: "1st Place",
+    year: "2024"
   },
   {
     icon: Mic,
     title: "Public Speaking",
-    description: "Winner of regional technical presentation competition, delivered talks on cloud architecture to 300+ attendees."
+    description: "Winner of regional technical presentation competition, delivered talks on cloud architecture to 300+ attendees.",
+    achievement: "Regional Winner",
+    year: "2024"
   },
   {
     icon: Award,
     title: "Community Impact",
-    description: "Mentored 20+ students in cloud technologies and organized workshops on AWS fundamentals and best practices."
+    description: "Mentored 20+ students in cloud technologies and organized workshops on AWS fundamentals and best practices.",
+    achievement: "20+ Mentees",
+    year: "Ongoing"
   }
 ];
 
 export const ExtrasSection = () => {
   return (
-    <section id="extras" className="py-20 px-4 bg-gradient-to-br from-accent/10 to-background">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-            Beyond Tech
-          </h2>
-          <div className="w-20 h-1 bg-gradient-hero mx-auto rounded-full"></div>
-          <p className="text-lg text-muted-foreground mt-6 max-w-2xl mx-auto">
-            Leadership, community engagement, and continuous learning shape my approach to technology and teamwork.
+    <section id="extras" className="section-padding bg-accent/30">
+      <div className="section-container">
+        <div className="section-header">
+          <h2 className="section-title">Beyond Tech</h2>
+          <div className="section-divider"></div>
+          <p className="section-description">
+            Leadership, community engagement, and continuous learning shape my approach to technology and teamwork
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid-extras">
           {activities.map((activity, index) => {
             const IconComponent = activity.icon;
             return (
               <div 
                 key={activity.title}
-                className="bg-gradient-card rounded-2xl p-8 shadow-soft hover:shadow-hover transition-all duration-300 hover:scale-105 group"
+                className="card-modern p-8 group animate-fade-in-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="flex items-start space-x-4">
-                  <div className="p-3 rounded-xl bg-gradient-accent group-hover:scale-110 transition-transform">
-                    <IconComponent className="h-6 w-6 text-accent-foreground" />
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="p-4 rounded-2xl bg-gradient-to-r from-primary to-primary-glow group-hover:scale-110 transition-transform duration-300">
+                      <IconComponent className="w-6 h-6 text-white" />
+                    </div>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold mb-3 text-foreground group-hover:text-primary transition-colors">
-                      {activity.title}
-                    </h3>
+                  
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center justify-between mb-3">
+                      <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
+                        {activity.title}
+                      </h3>
+                      <span className="text-sm text-muted-foreground font-medium">
+                        {activity.year}
+                      </span>
+                    </div>
+                    
+                    <div className="mb-4">
+                      <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20">
+                        {activity.achievement}
+                      </span>
+                    </div>
+                    
                     <p className="text-muted-foreground leading-relaxed">
                       {activity.description}
                     </p>
