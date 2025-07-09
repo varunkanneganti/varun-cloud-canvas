@@ -52,7 +52,7 @@ export const Navigation = () => {
     }`}>
       <div className="max-w-6xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-xl font-bold bg-gradient-hero bg-clip-text text-transparent">
+          <div className="text-xl font-bold bg-gradient-hero bg-clip-text text-transparent hover:scale-110 transition-transform duration-300 cursor-pointer">
             VK
           </div>
           
@@ -61,7 +61,7 @@ export const Navigation = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
+                className={`text-sm font-medium transition-all duration-300 hover:text-primary hover:scale-105 hover-underline relative ${
                   activeSection === item.href.substring(1)
                     ? "text-primary"
                     : "text-foreground/70"

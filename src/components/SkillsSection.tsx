@@ -44,11 +44,11 @@ export const SkillsSection = () => {
             return (
               <div 
                 key={category.title}
-                className="bg-gradient-card rounded-2xl p-8 shadow-soft hover:shadow-hover transition-all duration-300 hover:scale-105"
+                className="bg-gradient-card rounded-2xl p-8 shadow-soft card-hover group"
               >
                 <div className="flex items-center mb-6">
-                  <div className={`p-3 rounded-xl bg-gradient-to-r ${category.color} mr-4`}>
-                    <IconComponent className="h-6 w-6 text-white" />
+                  <div className={`p-3 rounded-xl bg-gradient-to-r ${category.color} mr-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <IconComponent className="h-6 w-6 text-white group-hover:rotate-12 transition-transform duration-300" />
                   </div>
                   <h3 className="text-xl font-semibold text-foreground">
                     {category.title}
@@ -59,7 +59,7 @@ export const SkillsSection = () => {
                   {category.skills.map((skill) => (
                     <span 
                       key={skill}
-                      className="px-3 py-1 bg-accent/50 text-accent-foreground rounded-full text-sm font-medium hover:bg-accent transition-colors"
+                      className="px-3 py-1 bg-accent/50 text-accent-foreground rounded-full text-sm font-medium tech-tag-hover"
                     >
                       {skill}
                     </span>

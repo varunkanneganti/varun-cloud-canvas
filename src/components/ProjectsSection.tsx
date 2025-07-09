@@ -31,9 +31,9 @@ export const ProjectsSection = () => {
           {projects.map((project, index) => (
             <div 
               key={project.title}
-              className="bg-gradient-card rounded-2xl p-8 shadow-soft hover:shadow-hover transition-all duration-300 hover:scale-105 group"
+              className="bg-gradient-card rounded-2xl p-8 shadow-soft card-hover group cursor-pointer"
             >
-              <h3 className="text-xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors">
+              <h3 className="text-xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors duration-300">
                 {project.title}
               </h3>
               
@@ -47,7 +47,7 @@ export const ProjectsSection = () => {
                   {project.tech.map((tech) => (
                     <span 
                       key={tech}
-                      className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium"
+                      className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium tech-tag-hover"
                     >
                       {tech}
                     </span>
@@ -71,12 +71,12 @@ export const ProjectsSection = () => {
               </div>
               
               <div className="flex gap-3">
-                <Button variant="default" size="sm" className="flex-1">
-                  <Github className="mr-2 h-4 w-4" />
+                <Button variant="default" size="sm" className="flex-1 button-hover group/button">
+                  <Github className="mr-2 h-4 w-4 group-hover/button:rotate-12 transition-transform duration-200" />
                   Code
                 </Button>
-                <Button variant="outline" size="sm" className="flex-1">
-                  <ExternalLink className="mr-2 h-4 w-4" />
+                <Button variant="outline" size="sm" className="flex-1 button-hover group/button">
+                  <ExternalLink className="mr-2 h-4 w-4 group-hover/button:rotate-12 transition-transform duration-200" />
                   Live Demo
                 </Button>
               </div>
