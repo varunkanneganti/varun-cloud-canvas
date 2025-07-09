@@ -10,7 +10,7 @@ const skillCategories = [
   {
     title: "DevOps & Tools",
     icon: GitBranch,
-    skills: ["GitHub Actions", "CI/CD", "Infrastructure as Code", "Docker", "Terraform"],
+    skills: ["GitHub Actions", "CI/CD", "Infrastructure as Code", "Docker"],
     color: "from-accent to-primary"
   },
   {

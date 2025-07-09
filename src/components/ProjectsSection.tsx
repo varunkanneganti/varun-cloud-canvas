@@ -11,7 +11,7 @@ const projects = [
   {
     title: "CI/CD Pipeline Automation",
     description: "Comprehensive GitHub Actions workflows for automated testing, building, and deployment. Features multi-environment support, automated rollbacks, and integration with AWS services.",
-    tech: ["GitHub Actions", "Docker", "AWS ECS", "Terraform", "SonarQube"],
+    tech: ["GitHub Actions", "Docker", "AWS ECS", "SonarQube"],
     features: ["Zero-downtime deployments", "Automated testing", "Security scanning", "Infrastructure as Code"]
   },
   {
