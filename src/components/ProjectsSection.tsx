@@ -9,12 +9,6 @@ const projects = [
     features: ["Sub-100ms response times", "Custom short codes", "Analytics tracking", "Rate limiting"]
   },
   {
-    title: "CI/CD Pipeline Automation",
-    description: "Comprehensive GitHub Actions workflows for automated testing, building, and deployment. Features multi-environment support, automated rollbacks, and integration with AWS services.",
-    tech: ["GitHub Actions", "Docker", "AWS ECS", "SonarQube"],
-    features: ["Zero-downtime deployments", "Automated testing", "Security scanning", "Infrastructure as Code"]
-  },
-  {
     title: "Portfolio Website",
     description: "This responsive portfolio website showcasing modern web development practices. Built with React and deployed using AWS S3 and CloudFront for optimal performance and global distribution.",
     tech: ["React", "TypeScript", "Tailwind CSS", "AWS S3", "CloudFront"],
