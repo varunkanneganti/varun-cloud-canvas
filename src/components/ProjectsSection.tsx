@@ -38,7 +38,7 @@ export const ProjectsSection = () => {
           {projects.map((project, index) => (
             <div 
               key={project.title}
-              className="card-project animate-fade-in-up"
+              className="card-project group animate-fade-in-up"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               {/* Project Image */}

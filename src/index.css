@@ -220,7 +220,7 @@
   }
 
   .card-project {
-    @apply card-modern p-8 group cursor-pointer;
+    @apply card-modern p-8 cursor-pointer;
     @apply hover:shadow-2xl hover:shadow-primary/10;
   }
 
