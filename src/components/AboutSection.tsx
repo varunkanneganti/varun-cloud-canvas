@@ -26,26 +26,6 @@ export const AboutSection = () => {
                 that the best solutions emerge when technical excellence meets empathetic design.
               </p>
             </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 pt-8 border-t border-border/50">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary mb-1">2+</div>
-                <div className="text-sm text-muted-foreground">Years Experience</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary mb-1">10+</div>
-                <div className="text-sm text-muted-foreground">Projects Completed</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary mb-1">5+</div>
-                <div className="text-sm text-muted-foreground">AWS Services</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary mb-1">20+</div>
-                <div className="text-sm text-muted-foreground">Students Mentored</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

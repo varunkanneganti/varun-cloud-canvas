@@ -37,7 +37,7 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+91 (XXX) XXX-XXXX"
+    value: "Available on request"
   },
   {
     icon: Mail,

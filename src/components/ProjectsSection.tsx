@@ -6,8 +6,8 @@ const projects = [
     title: "URL Shortener API",
     description: "A high-performance URL shortening service built with FastAPI, featuring Redis caching for lightning-fast redirects and PostgreSQL for persistent storage. Deployed with CloudFront CDN for global low-latency access.",
     tech: ["FastAPI", "PostgreSQL", "Redis", "CloudFront", "AWS Lambda"],
-    features: ["Sub-100ms response times", "Custom short codes", "Analytics tracking", "Rate limiting"],
-    stats: { stars: 24, forks: 8 },
+    features: ["Fast response times", "Custom short codes", "Analytics tracking", "Rate limiting"],
+    stats: { stars: "★", forks: "⑂" },
     status: "Production",
     image: "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=800"
   },
@@ -16,7 +16,7 @@ const projects = [
     description: "This responsive portfolio website showcasing modern web development practices. Built with React and deployed using AWS S3 and CloudFront for optimal performance and global distribution.",
     tech: ["React", "TypeScript", "Tailwind CSS", "AWS S3", "CloudFront"],
     features: ["Mobile-first design", "Dark/light themes", "SEO optimized", "Fast loading"],
-    stats: { stars: 12, forks: 3 },
+    stats: { stars: "★", forks: "⑂" },
     status: "Live",
     image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800"
   }

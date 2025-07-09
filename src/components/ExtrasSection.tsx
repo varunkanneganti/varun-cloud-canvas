@@ -5,29 +5,25 @@ const activities = [
     icon: Users,
     title: "Sports Leadership",
     description: "Captain of university basketball team, leading team strategy and fostering collaborative excellence both on and off the court.",
-    achievement: "Team Captain",
-    year: "2023-2024"
+    achievement: "Team Captain"
   },
   {
     icon: Trophy,
     title: "Technical Fest Winner",
     description: "First place in inter-college hackathon for developing an innovative IoT solution for smart campus management.",
-    achievement: "1st Place",
-    year: "2024"
+    achievement: "Winner"
   },
   {
     icon: Mic,
     title: "Public Speaking",
-    description: "Winner of regional technical presentation competition, delivered talks on cloud architecture to 300+ attendees.",
-    achievement: "Regional Winner",
-    year: "2024"
+    description: "Winner of regional technical presentation competition, delivered talks on cloud architecture to large audiences.",
+    achievement: "Regional Winner"
   },
   {
     icon: Award,
     title: "Community Impact",
-    description: "Mentored 20+ students in cloud technologies and organized workshops on AWS fundamentals and best practices.",
-    achievement: "20+ Mentees",
-    year: "Ongoing"
+    description: "Mentored students in cloud technologies and organized workshops on AWS fundamentals and best practices.",
+    achievement: "Mentor"
   }
 ];
 
@@ -64,9 +60,6 @@ export const ExtrasSection = () => {
                       <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
                         {activity.title}
                       </h3>
-                      <span className="text-sm text-muted-foreground font-medium">
-                        {activity.year}
-                      </span>
                     </div>
                     
                     <div className="mb-4">
