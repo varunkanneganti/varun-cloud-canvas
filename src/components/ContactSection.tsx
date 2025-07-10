@@ -210,7 +210,7 @@ export const ContactSection = () => {
                 
                 <Button type="submit" className="btn-primary w-full group relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <Send className="w-5 h-5" />
                   <span className="relative z-10">Send Message</span>
                 </Button>
               </form>

@@ -1,5 +1,6 @@
 import { ExternalLink, Github, Star, GitFork, Calendar, Code } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react";
 
 const projects = [
   {
@@ -206,7 +207,6 @@ export const ProjectsSection = () => {
           <Button variant="outline" className="btn-secondary group">
             <Github className="w-5 h-5 group-hover:rotate-12 transition-transform" />
             View All Projects on GitHub
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
       </div>

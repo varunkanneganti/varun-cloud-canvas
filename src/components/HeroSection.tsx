@@ -48,13 +48,12 @@ export const HeroSection = () => {
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up-delay mb-16">
             <Button className="btn-primary group min-w-[200px]">
-              <Download className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              <Download className="w-5 h-5" />
               View Resume
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             
             <Button variant="outline" className="btn-secondary group min-w-[200px]">
-              <Mail className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              <Mail className="w-5 h-5" />
               Let's Connect
             </Button>
           </div>
@@ -69,7 +68,7 @@ export const HeroSection = () => {
               <div className="w-6 h-10 border-2 border-current rounded-full flex justify-center relative">
                 <div className="w-1 h-3 bg-current rounded-full mt-2 animate-pulse"></div>
               </div>
-              <ChevronDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
+              <ChevronDown className="w-4 h-4" />
             </div>
           </button>
         </div>
