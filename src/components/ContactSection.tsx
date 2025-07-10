@@ -48,7 +48,7 @@ const contactInfo = [
 ];
 
 export const ContactSection = () => {
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -61,31 +61,33 @@ export const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    emailjs
-      .sendForm(
-        "service_a1oblvt",        // Your Service ID
-        "template_8oby3ko",       // Your Template ID
-        form.current,
-        "WKI0O6c9hjBypJxFn"       // Your Public API Key
-      )
-      .then(
-        (result) => {
-          console.log("Email sent:", result.text);
-          alert("Message sent successfully! ✅");
-          setFormData({
-            name: '',
-            email: '',
-            subject: '',
-            message: ''
-          });
-          setIsSubmitting(false);
-        },
-        (error) => {
-          console.error("Email send failed:", error);
-          alert("Oops! Something went wrong ❌");
-          setIsSubmitting(false);
-        }
-      );
+    if (form.current) {
+      emailjs
+        .sendForm(
+          "service_a1oblvt",        // Your Service ID
+          "template_8oby3ko",       // Your Template ID
+          form.current,
+          "WKI0O6c9hjBypJxFn"       // Your Public API Key
+        )
+        .then(
+          (result) => {
+            console.log("Email sent:", result.text);
+            alert("Message sent successfully! ✅");
+            setFormData({
+              name: '',
+              email: '',
+              subject: '',
+              message: ''
+            });
+            setIsSubmitting(false);
+          },
+          (error) => {
+            console.error("Email send failed:", error);
+            alert("Oops! Something went wrong ❌");
+            setIsSubmitting(false);
+          }
+        );
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -180,7 +182,6 @@ export const ContactSection = () => {
                     <Input
                       id="name"
                       name="name"
-                      data-emailjs="from_name"
                       placeholder="Your Name"
                       value={formData.name}
                       onChange={handleChange}
@@ -196,7 +197,6 @@ export const ContactSection = () => {
                     <Input
                       id="email"
                       name="email"
-                      data-emailjs="reply_to"
                       type="email"
                       placeholder="your.email@example.com"
                       value={formData.email}
@@ -214,7 +214,6 @@ export const ContactSection = () => {
                   <Input
                     id="subject"
                     name="subject"
-                    data-emailjs="subject"
                     placeholder="What's this about?"
                     value={formData.subject}
                     onChange={handleChange}
@@ -230,7 +229,6 @@ export const ContactSection = () => {
                   <Textarea
                     id="message"
                     name="message"
-                    data-emailjs="message"
                     placeholder="Tell me about your project or just say hello!"
                     value={formData.message}
                     onChange={handleChange}
