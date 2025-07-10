@@ -2,7 +2,8 @@ import { Github, Linkedin, Mail, Send, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "emailjs-com";
 
 const socialLinks = [
   {
@@ -47,17 +48,44 @@ const contactInfo = [
 ];
 
 export const ContactSection = () => {
+  const form = useRef();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     subject: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+
+    emailjs
+      .sendForm(
+        "service_a1oblvt",        // Your Service ID
+        "template_8oby3ko",       // Your Template ID
+        form.current,
+        "WKI0O6c9hjBypJxFn"       // Your Public API Key
+      )
+      .then(
+        (result) => {
+          console.log("Email sent:", result.text);
+          alert("Message sent successfully! ✅");
+          setFormData({
+            name: '',
+            email: '',
+            subject: '',
+            message: ''
+          });
+          setIsSubmitting(false);
+        },
+        (error) => {
+          console.error("Email send failed:", error);
+          alert("Oops! Something went wrong ❌");
+          setIsSubmitting(false);
+        }
+      );
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -143,7 +171,7 @@ export const ContactSection = () => {
               
               <h3 className="text-xl font-semibold text-foreground mb-6">Send a Message</h3>
               
-              <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
+              <form ref={form} onSubmit={handleSubmit} className="space-y-6 relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
@@ -152,6 +180,7 @@ export const ContactSection = () => {
                     <Input
                       id="name"
                       name="name"
+                      data-emailjs="from_name"
                       placeholder="Your Name"
                       value={formData.name}
                       onChange={handleChange}
@@ -167,6 +196,7 @@ export const ContactSection = () => {
                     <Input
                       id="email"
                       name="email"
+                      data-emailjs="reply_to"
                       type="email"
                       placeholder="your.email@example.com"
                       value={formData.email}
@@ -184,6 +214,7 @@ export const ContactSection = () => {
                   <Input
                     id="subject"
                     name="subject"
+                    data-emailjs="subject"
                     placeholder="What's this about?"
                     value={formData.subject}
                     onChange={handleChange}
@@ -199,6 +230,7 @@ export const ContactSection = () => {
                   <Textarea
                     id="message"
                     name="message"
+                    data-emailjs="message"
                     placeholder="Tell me about your project or just say hello!"
                     value={formData.message}
                     onChange={handleChange}
@@ -208,10 +240,14 @@ export const ContactSection = () => {
                   />
                 </div>
                 
-                <Button type="submit" className="btn-primary w-full group relative overflow-hidden">
+                <Button 
+                  type="submit" 
+                  disabled={isSubmitting}
+                  className="btn-primary w-full group relative overflow-hidden disabled:opacity-50 disabled:cursor-not-allowed"
+                >
                   <div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <Send className="w-5 h-5" />
-                  <span className="relative z-10">Send Message</span>
+                  <span className="relative z-10">{isSubmitting ? 'Sending...' : 'Send Message'}</span>
                 </Button>
               </form>
             </div>
