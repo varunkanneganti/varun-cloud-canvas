@@ -57,20 +57,6 @@ export const HeroSection = () => {
               Let's Connect
             </Button>
           </div>
-
-          {/* Enhanced scroll indicator */}
-          <button 
-            onClick={scrollToAbout}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hover:animate-none transition-all duration-300 group cursor-pointer"
-          >
-            <div className="flex flex-col items-center gap-2 text-muted-foreground group-hover:text-primary transition-colors">
-              <span className="text-sm font-medium">Scroll to explore</span>
-              <div className="w-6 h-10 border-2 border-current rounded-full flex justify-center relative">
-                <div className="w-1 h-3 bg-current rounded-full mt-2 animate-pulse"></div>
-              </div>
-              <ChevronDown className="w-4 h-4" />
-            </div>
-          </button>
         </div>
       </div>
     </section>
