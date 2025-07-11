@@ -133,7 +133,7 @@ export const SkillsSection = () => {
             <div className="w-px h-8 bg-border"></div>
             <div className="text-center">
               <div className="text-2xl font-bold text-primary">AWS</div>
-              <div className="text-sm text-muted-foreground">Certified</div>
+              <div className="text-sm text-muted-foreground">Learning</div>
             </div>
           </div>
         </div>

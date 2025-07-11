@@ -16,9 +16,9 @@ const socialLinks = [
   {
     name: "GitHub", 
     icon: Github,
-    url: "https://github.com/varun-kanneganti",
+    url: "https://github.com/varunkanneganti",
     color: "hover:text-gray-900 dark:hover:text-gray-100",
-    handle: "@varun-kanneganti"
+    handle: "@varunkanneganti"
   },
   {
     name: "Email",
@@ -33,7 +33,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Bangalore, India"
+    value: "Hyderabad, India"
   },
   {
     icon: Phone,
