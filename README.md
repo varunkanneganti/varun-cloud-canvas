@@ -1,73 +1,127 @@
-# Welcome to your Lovable project
+# Varun Kanneganti - Portfolio Website
 
-## Project info
+A modern, responsive portfolio website showcasing my work as a Cloud Engineer and Java Backend Developer.
 
-**URL**: https://lovable.dev/projects/5245cad1-089f-44be-bc4c-44be045eaedf
+## 🚀 Features
 
-## How can I edit this code?
+- **Modern Design**: Clean, professional interface with smooth animations
+- **Responsive**: Optimized for all devices and screen sizes
+- **Dark/Light Theme**: Toggle between themes for better user experience
+- **Contact Form**: Functional contact form with email integration
+- **Performance Optimized**: Fast loading with modern web technologies
 
-There are several ways of editing your application.
+## 🛠️ Tech Stack
 
-**Use Lovable**
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **UI Components**: Radix UI primitives with custom styling
+- **Icons**: Lucide React
+- **Deployment**: AWS S3 + CloudFront
+- **Build Tool**: Vite
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/5245cad1-089f-44be-bc4c-44be045eaedf) and start prompting.
+## 🏗️ Project Structure
 
-Changes made via Lovable will be committed automatically to this repo.
+```
+src/
+├── components/          # Reusable UI components
+│   ├── ui/             # Base UI components
+│   ├── HeroSection.tsx
+│   ├── AboutSection.tsx
+│   ├── SkillsSection.tsx
+│   ├── ProjectsSection.tsx
+│   ├── ExtrasSection.tsx
+│   └── ContactSection.tsx
+├── pages/              # Page components
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions
+└── styles/             # Global styles
+```
 
-**Use your preferred IDE**
+## 🚀 Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Node.js (v18 or higher)
+- npm or yarn
 
-Follow these steps:
+### Installation
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. Clone the repository:
+```bash
+git clone https://github.com/varunkanneganti/portfolio.git
+cd portfolio
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. Install dependencies:
+```bash
+npm install
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open [http://localhost:8080](http://localhost:8080) in your browser
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📦 Build & Deployment
 
-**Use GitHub Codespaces**
+### Build for Production
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+npm run build
+```
 
-## What technologies are used for this project?
+### Deploy to AWS S3
 
-This project is built with:
+The project includes GitHub Actions workflow for automated deployment to AWS S3:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1. Configure AWS credentials in GitHub Secrets:
+   - `AWS_ACCESS_KEY_ID`
+   - `AWS_SECRET_ACCESS_KEY`
 
-## How can I deploy this project?
+2. Update the S3 bucket name in `.github/workflows/deploy.yml`
 
-Simply open [Lovable](https://lovable.dev/projects/5245cad1-089f-44be-bc4c-44be045eaedf) and click on Share -> Publish.
+3. Push to main branch to trigger deployment
 
-## Can I connect a custom domain to my Lovable project?
+## 🎨 Customization
 
-Yes, you can!
+### Colors & Themes
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+The design system uses CSS custom properties defined in `src/index.css`. You can customize:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- Primary colors
+- Background colors
+- Typography
+- Shadows and effects
+
+### Content
+
+Update the content in each section component:
+
+- **Hero**: `src/components/HeroSection.tsx`
+- **About**: `src/components/AboutSection.tsx`
+- **Skills**: `src/components/SkillsSection.tsx`
+- **Projects**: `src/components/ProjectsSection.tsx`
+- **Contact**: `src/components/ContactSection.tsx`
+
+## 📧 Contact Form Setup
+
+The contact form uses EmailJS for sending emails. To set it up:
+
+1. Create an account at [EmailJS](https://www.emailjs.com/)
+2. Create a service and template
+3. Update the credentials in `src/components/ContactSection.tsx`
+
+## 🤝 Contributing
+
+This is a personal portfolio project, but suggestions and feedback are welcome!
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🙏 Acknowledgments
+
+- Design inspiration from modern portfolio websites
+- Icons by [Lucide](https://lucide.dev/)
+- UI components built with [Radix UI](https://www.radix-ui.com/)
