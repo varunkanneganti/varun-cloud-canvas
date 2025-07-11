@@ -4,14 +4,24 @@ import { useState, useEffect } from "react";
 
 const projects = [
   {
-    title: "URL Shortener API",
-    description: "A high-performance URL shortening service built with FastAPI, featuring Redis caching for lightning-fast redirects and PostgreSQL for persistent storage. Deployed with CloudFront CDN for global low-latency access.",
-    tech: ["FastAPI", "PostgreSQL", "Redis", "CloudFront", "AWS Lambda"],
-    features: ["Fast response times", "Custom short codes", "Analytics tracking", "Rate limiting"],
+    title: "Learning Management System API",
+    description: "Built and tested comprehensive REST APIs for a Learning Management System using Java 8, Spring Boot, and MySQL. Implemented clean code principles with proper OOP design patterns and Collections framework.",
+    tech: ["Java 8", "Spring Boot", "MySQL", "JUnit", "Mockito"],
+    features: ["RESTful API design", "Test coverage with JUnit", "Clean code principles", "Relational schema design"],
     stats: { stars: "★", forks: "⑂" },
     status: "Production",
     category: "Backend",
-    image: "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=800"
+    image: "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    title: "AWS Cloud Infrastructure",
+    description: "Designed and implemented scalable cloud infrastructure using AWS services including EC2, Lambda, and RDS. Focused on secure authentication and CI/CD automation best practices.",
+    tech: ["AWS EC2", "Lambda", "RDS", "GitHub Actions", "AWS CodeDeploy"],
+    features: ["Auto-scaling", "Secure authentication", "CI/CD automation", "Cost optimization"],
+    stats: { stars: "★", forks: "⑂" },
+    status: "Development",
+    category: "DevOps",
+    image: "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800"
   },
   {
     title: "Portfolio Website",
@@ -22,16 +32,6 @@ const projects = [
     status: "Live",
     category: "Frontend",
     image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800"
-  },
-  {
-    title: "Cloud Infrastructure Automation",
-    description: "Infrastructure as Code solution using AWS CDK and Terraform for automated deployment of scalable cloud resources with monitoring and security best practices.",
-    tech: ["AWS CDK", "Terraform", "CloudWatch", "IAM", "VPC"],
-    features: ["Auto-scaling", "Monitoring", "Security compliance", "Cost optimization"],
-    stats: { stars: "★", forks: "⑂" },
-    status: "Development",
-    category: "DevOps",
-    image: "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800"
   }
 ];
 

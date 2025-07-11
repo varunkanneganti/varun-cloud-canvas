@@ -9,9 +9,9 @@ const socialLinks = [
   {
     name: "LinkedIn",
     icon: Linkedin,
-    url: "https://linkedin.com/in/varun-kanneganti",
+    url: "https://www.linkedin.com/in/varun-kanneganti-0672422b7",
     color: "hover:text-blue-600",
-    handle: "@varun-kanneganti"
+    handle: "varun-kanneganti-0672422b7"
   },
   {
     name: "GitHub", 
@@ -23,9 +23,9 @@ const socialLinks = [
   {
     name: "Email",
     icon: Mail,
-    url: "mailto:varun.kanneganti@example.com",
+    url: "mailto:reachtovarun4@gmail.com",
     color: "hover:text-red-600",
-    handle: "varun.kanneganti@example.com"
+    handle: "reachtovarun4@gmail.com"
   }
 ];
 
@@ -33,17 +33,17 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Hyderabad, India"
+    value: "Bangalore, India"
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "Available on request"
+    value: "+91 9640657591"
   },
   {
     icon: Mail,
     label: "Email",
-    value: "varun.kanneganti@example.com"
+    value: "reachtovarun4@gmail.com"
   }
 ];
 

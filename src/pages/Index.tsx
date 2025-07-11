@@ -28,7 +28,7 @@ const Index = () => {
                 Varun Kanneganti
               </div>
               <p className="text-muted-foreground">
-                AWS Cloud Engineer & Product Intern
+                Cloud Engineer & Java Backend Developer
               </p>
             </div>
             

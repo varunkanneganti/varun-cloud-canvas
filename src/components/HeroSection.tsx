@@ -31,14 +31,15 @@ export const HeroSection = () => {
             </h1>
             
             <div className="flex flex-wrap justify-center gap-3 mb-8">
-              <span className="skill-tag-hero">AWS Cloud Engineer</span>
+              <span className="skill-tag-hero">Cloud Engineer</span>
+              <span className="skill-tag-hero">Java Backend Developer</span>
               <span className="skill-tag-hero">Product Intern</span>
-              <span className="skill-tag-hero">Backend Developer</span>
             </div>
             
             <p className="text-xl md:text-2xl text-muted-foreground mb-12 font-medium max-w-4xl mx-auto leading-relaxed">
-              Building scalable cloud infrastructure and secure AWS solutions while bridging 
-              DevOps, backend development, and product strategy at{" "}
+              Building scalable, secure, and production-ready systems with AWS Cloud Infrastructure 
+              and Java backend development. Currently exploring the synergy between product thinking 
+              and robust cloud engineering at{" "}
               <span className="text-primary font-semibold relative">
                 Signitives
                 <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-primary-glow"></div>

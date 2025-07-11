@@ -2,28 +2,28 @@ import { Award, Users, Mic, Trophy } from "lucide-react";
 
 const activities = [
   {
+    icon: Award,
+    title: "Certifications",
+    description: "Completed Generative AI: Introduction and Applications certification, staying current with emerging technologies and AI applications in software development.",
+    achievement: "Certified"
+  },
+  {
     icon: Users,
-    title: "Sports Leadership",
-    description: "Captain of university basketball team, leading team strategy and fostering collaborative excellence both on and off the court.",
-    achievement: "Team Captain"
+    title: "Cross-functional Collaboration",
+    description: "Contributing to user-focused digital product development with involvement in user research, agile product cycles, and cross-functional team collaboration.",
+    achievement: "Product Intern"
   },
   {
     icon: Trophy,
-    title: "Technical Fest Winner",
-    description: "First place in inter-college hackathon for developing an innovative IoT solution for smart campus management.",
-    achievement: "Winner"
+    title: "Continuous Learning",
+    description: "Currently diving deeper into AWS services, focusing on scalable backend deployments using EC2, Lambda, and ECS with secure authentication practices.",
+    achievement: "In Progress"
   },
   {
     icon: Mic,
-    title: "Public Speaking",
-    description: "Winner of regional technical presentation competition, delivered talks on cloud architecture to large audiences.",
-    achievement: "Regional Winner"
-  },
-  {
-    icon: Award,
-    title: "Community Impact",
-    description: "Mentored students in cloud technologies and organized workshops on AWS fundamentals and best practices.",
-    achievement: "Mentor"
+    title: "Education",
+    description: "B.Tech in Computer Science from Presidency University, Bangalore (2020–2024), with a strong foundation in software engineering principles.",
+    achievement: "Graduate"
   }
 ];
 

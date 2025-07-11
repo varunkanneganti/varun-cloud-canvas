@@ -2,30 +2,30 @@ import { Cloud, Server, Database, GitBranch, Award, TrendingUp } from "lucide-re
 
 const skillCategories = [
   {
-    title: "AWS Cloud",
+    title: "Cloud & AWS",
     icon: Cloud,
-    skills: ["EC2", "Lambda", "S3", "CloudFront", "IAM", "RDS", "Route 53"],
+    skills: ["AWS EC2", "S3", "Lambda", "RDS", "VPC", "IAM", "CloudFront"],
     color: "from-blue-500 to-blue-600",
     level: "Advanced"
   },
   {
-    title: "DevOps & Tools",
+    title: "CI/CD & Tools",
     icon: GitBranch,
-    skills: ["GitHub Actions", "CI/CD", "Infrastructure as Code", "Docker"],
+    skills: ["GitHub Actions", "AWS CodeDeploy", "Git", "Maven", "IntelliJ", "Postman"],
     color: "from-green-500 to-green-600",
     level: "Intermediate"
   },
   {
-    title: "Backend Stack",
+    title: "Backend Development",
     icon: Server,
-    skills: ["Java", "Spring Boot", "REST APIs", "Microservices", "FastAPI"],
+    skills: ["Java 8", "Spring Boot", "Hibernate", "REST APIs", "OOP", "Collections"],
     color: "from-purple-500 to-purple-600",
     level: "Advanced"
   },
   {
     title: "Databases & Testing",
     icon: Database,
-    skills: ["MongoDB", "MySQL", "Redis", "JUnit", "Mockito"],
+    skills: ["MySQL", "PostgreSQL", "MongoDB", "JUnit", "Mockito"],
     color: "from-orange-500 to-orange-600",
     level: "Intermediate"
   }
