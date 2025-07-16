@@ -22,16 +22,6 @@ const projects = [
     status: "Production",
     category: "Backend",
     image: "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800"
-  },
-  {
-    title: "Portfolio Website",
-    description: "This responsive portfolio website showcasing modern web development practices. Built with React and deployed using AWS S3 and CloudFront for optimal performance and global distribution.",
-    tech: ["React", "TypeScript", "Tailwind CSS", "AWS S3", "CloudFront"],
-    features: ["Mobile-first design", "Dark/light themes", "SEO optimized", "Fast loading"],
-    stats: { stars: "★", forks: "⑂" },
-    status: "Live",
-    category: "Frontend",
-    image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800"
   }
 ];
 
