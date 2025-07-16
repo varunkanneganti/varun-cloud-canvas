@@ -1,142 +1,241 @@
-import { Cloud, Server, Database, GitBranch, Award, TrendingUp } from "lucide-react";
+import { motion } from "framer-motion";
+import { 
+  SiAmazonaws, 
+  SiTerraform, 
+  SiDocker, 
+  SiFastapi, 
+  SiSpringboot,
+  SiPostgresql, 
+  SiRedis,
+  SiMongodb,
+  SiMysql,
+  SiGithubactions,
+  SiGit,
+  SiNginx,
+  SiJava,
+  SiPython,
+  SiJunit5,
+  SiIntellijidea,
+  SiPostman,
+  SiMaven
+} from "react-icons/si";
+import { Database, Cloud, Server, GitBranch } from "lucide-react";
 
 const skillCategories = [
   {
-    title: "Cloud & AWS",
+    title: "Cloud & DevOps",
     icon: Cloud,
-    skills: ["AWS EC2", "S3", "RDS", "CloudFront", "Route 53", "ACM", "Cognito", "ElastiCache"],
-    color: "from-blue-500 to-blue-600",
-    level: "Advanced"
-  },
-  {
-    title: "CI/CD & Tools",
-    icon: GitBranch,
-    skills: ["GitHub Actions", "NGINX", "systemd", "Git", "Maven", "IntelliJ", "Postman"],
-    color: "from-green-500 to-green-600",
-    level: "Intermediate"
+    gradient: "from-orange-500 to-red-500",
+    skills: [
+      { name: "AWS EC2", icon: SiAmazonaws, level: "proficient", color: "#FF9900" },
+      { name: "S3", icon: SiAmazonaws, level: "proficient", color: "#FF9900" },
+      { name: "RDS", icon: SiAmazonaws, level: "proficient", color: "#FF9900" },
+      { name: "CloudFront", icon: SiAmazonaws, level: "intermediate", color: "#FF9900" },
+      { name: "Route 53", icon: SiAmazonaws, level: "intermediate", color: "#FF9900" },
+      { name: "Cognito", icon: SiAmazonaws, level: "intermediate", color: "#FF9900" },
+      { name: "ElastiCache", icon: SiAmazonaws, level: "intermediate", color: "#FF9900" },
+      { name: "ACM", icon: SiAmazonaws, level: "intermediate", color: "#FF9900" }
+    ]
   },
   {
     title: "Backend Development",
     icon: Server,
-    skills: ["Java 8", "Spring Boot", "FastAPI", "REST APIs", "Streams & Lambdas", "JUnit"],
-    color: "from-purple-500 to-purple-600",
-    level: "Advanced"
+    gradient: "from-green-500 to-teal-500",
+    skills: [
+      { name: "Java 8", icon: SiJava, level: "proficient", color: "#ED8B00" },
+      { name: "Spring Boot", icon: SiSpringboot, level: "proficient", color: "#6DB33F" },
+      { name: "FastAPI", icon: SiFastapi, level: "proficient", color: "#009688" },
+      { name: "REST APIs", icon: Server, level: "proficient", color: "#4F46E5" },
+      { name: "JUnit", icon: SiJunit5, level: "intermediate", color: "#25A162" },
+      { name: "Mockito", icon: SiJava, level: "intermediate", color: "#ED8B00" }
+    ]
   },
   {
-    title: "Databases & Testing",
+    title: "Databases",
     icon: Database,
-    skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "MariaDB", "Mockito"],
-    color: "from-orange-500 to-orange-600",
-    level: "Intermediate"
+    gradient: "from-blue-500 to-purple-500",
+    skills: [
+      { name: "PostgreSQL", icon: SiPostgresql, level: "proficient", color: "#336791" },
+      { name: "MySQL", icon: SiMysql, level: "proficient", color: "#4479A1" },
+      { name: "Redis", icon: SiRedis, level: "intermediate", color: "#DC382D" },
+      { name: "MongoDB", icon: SiMongodb, level: "intermediate", color: "#47A248" },
+      { name: "MariaDB", icon: SiMysql, level: "intermediate", color: "#003545" }
+    ]
+  },
+  {
+    title: "Tools & Platforms",
+    icon: GitBranch,
+    gradient: "from-purple-500 to-pink-500",
+    skills: [
+      { name: "GitHub Actions", icon: SiGithubactions, level: "proficient", color: "#2088FF" },
+      { name: "Git", icon: SiGit, level: "proficient", color: "#F05032" },
+      { name: "NGINX", icon: SiNginx, level: "intermediate", color: "#009639" },
+      { name: "Maven", icon: SiMaven, level: "intermediate", color: "#C71A36" },
+      { name: "IntelliJ", icon: SiIntellijidea, level: "proficient", color: "#000000" },
+      { name: "Postman", icon: SiPostman, level: "proficient", color: "#FF6C37" }
+    ]
   }
 ];
 
-const getLevelIcon = (level: string) => {
-  switch (level) {
-    case 'Advanced':
-      return <Award className="w-4 h-4" />;
-    case 'Intermediate':
-      return <TrendingUp className="w-4 h-4" />;
-    default:
-      return <TrendingUp className="w-4 h-4" />;
-  }
-};
-
 const getLevelColor = (level: string) => {
   switch (level) {
-    case 'Advanced':
-      return 'text-green-600 bg-green-50 border-green-200 dark:text-green-400 dark:bg-green-900/20 dark:border-green-800';
-    case 'Intermediate':
-      return 'text-blue-600 bg-blue-50 border-blue-200 dark:text-blue-400 dark:bg-blue-900/20 dark:border-blue-800';
+    case 'proficient':
+      return 'skill-level proficient';
+    case 'intermediate':
+      return 'skill-level intermediate';
+    case 'learning':
+      return 'skill-level learning';
     default:
-      return 'text-gray-600 bg-gray-50 border-gray-200 dark:text-gray-400 dark:bg-gray-900/20 dark:border-gray-800';
+      return 'skill-level intermediate';
   }
 };
 
 export const SkillsSection = () => {
   return (
-    <section id="skills" className="section-padding bg-accent/30">
+    <section id="skills" className="section-padding">
       <div className="section-container">
-        <div className="section-header">
-          <h2 className="section-title">Technical Skills</h2>
+        <motion.div 
+          className="section-header"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="section-title">Technical Expertise</h2>
           <div className="section-divider"></div>
           <p className="section-description">
-            Technologies and tools I work with to build scalable solutions
+            Technologies and tools I use to build scalable cloud solutions and robust backend systems
           </p>
-        </div>
-        
+        </motion.div>
+
         <div className="grid-skills">
-          {skillCategories.map((category, index) => {
+          {skillCategories.map((category, categoryIndex) => {
             const IconComponent = category.icon;
             return (
-              <div 
+              <motion.div
                 key={category.title}
-                className="card-skill group animate-fade-in-up relative overflow-hidden"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="card-skill group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
+                viewport={{ once: true }}
               >
-                {/* Background decoration */}
-                <div className="absolute top-0 right-0 w-20 h-20 opacity-5 group-hover:opacity-10 transition-opacity">
-                  <IconComponent className="w-full h-full" />
-                </div>
-
-                <div className="relative z-10">
-                  <div className="flex flex-col items-center mb-6">
-                    <div className={`p-4 rounded-2xl bg-gradient-to-r ${category.color} mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                      <IconComponent className="w-8 h-8 text-white" />
-                    </div>
-                    
-                    <div className="text-center">
-                      <h3 className="text-xl font-semibold text-foreground mb-2">
-                        {category.title}
-                      </h3>
-                      
-                      {/* Skill level indicator */}
-                      <div className={`inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium border ${getLevelColor(category.level)}`}>
-                        {getLevelIcon(category.level)}
-                        {category.level}
-                      </div>
-                    </div>
+                {/* Category Header */}
+                <div className="mb-8">
+                  <div className={`w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-r ${category.gradient} flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg`}>
+                    <IconComponent className="w-8 h-8 text-white" />
                   </div>
                   
-                  <div className="flex flex-wrap gap-2 justify-center">
-                    {category.skills.map((skill, skillIndex) => (
-                      <span 
-                        key={skill} 
-                        className="skill-tag"
-                        style={{ animationDelay: `${(index * 0.1) + (skillIndex * 0.05)}s` }}
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    {category.title}
+                  </h3>
+                  
+                  <div className="w-12 h-1 bg-gradient-to-r from-primary to-primary-glow mx-auto rounded-full"></div>
                 </div>
 
-                {/* Hover effect overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
-              </div>
+                {/* Skills Grid */}
+                <div className="space-y-4">
+                  {category.skills.map((skill, skillIndex) => (
+                    <motion.div
+                      key={skill.name}
+                      className="flex items-center justify-between p-3 rounded-xl glass-card hover:shadow-lg transition-all duration-300 group/skill"
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ 
+                        duration: 0.4, 
+                        delay: categoryIndex * 0.1 + skillIndex * 0.05 
+                      }}
+                      viewport={{ once: true }}
+                      whileHover={{ scale: 1.02 }}
+                    >
+                      <div className="flex items-center gap-3">
+                        {typeof skill.icon === 'function' ? (
+                          <skill.icon 
+                            className="w-6 h-6 tech-icon" 
+                            style={{ color: skill.color }}
+                          />
+                        ) : (
+                          <skill.icon 
+                            className="w-6 h-6 tech-icon" 
+                            style={{ color: skill.color }}
+                          />
+                        )}
+                        <span className="font-semibold text-foreground group-hover/skill:text-primary transition-colors">
+                          {skill.name}
+                        </span>
+                      </div>
+                      
+                      <span className={getLevelColor(skill.level)}>
+                        {skill.level}
+                      </span>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
             );
           })}
         </div>
 
-        {/* Skills summary */}
-        <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-6 px-8 py-4 bg-card rounded-2xl border border-border/50 shadow-sm">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-primary">4+</div>
-              <div className="text-sm text-muted-foreground">Tech Stacks</div>
-            </div>
-            <div className="w-px h-8 bg-border"></div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-primary">20+</div>
-              <div className="text-sm text-muted-foreground">Technologies</div>
-            </div>
-            <div className="w-px h-8 bg-border"></div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-primary">AWS</div>
-              <div className="text-sm text-muted-foreground">Learning</div>
+        {/* Skills Summary */}
+        <motion.div 
+          className="mt-20"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+        >
+          <div className="card-modern p-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+              <div className="space-y-2">
+                <div className="text-4xl font-bold text-primary">8+</div>
+                <div className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
+                  AWS Services
+                </div>
+              </div>
+              
+              <div className="space-y-2">
+                <div className="text-4xl font-bold text-primary">6+</div>
+                <div className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
+                  Backend Frameworks
+                </div>
+              </div>
+              
+              <div className="space-y-2">
+                <div className="text-4xl font-bold text-primary">5+</div>
+                <div className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
+                  Database Systems
+                </div>
+              </div>
+              
+              <div className="space-y-2">
+                <div className="text-4xl font-bold text-primary">10+</div>
+                <div className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
+                  Dev Tools
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        </motion.div>
+
+        {/* Certifications */}
+        <motion.div 
+          className="mt-12"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <div className="text-center">
+            <h3 className="text-2xl font-bold text-foreground mb-6">Certifications & Learning</h3>
+            <div className="inline-flex items-center gap-4 px-8 py-4 glass-card rounded-2xl">
+              <SiAmazonaws className="w-8 h-8 text-[#FF9900]" />
+              <div className="text-left">
+                <div className="font-bold text-foreground">AWS Cloud Practitioner</div>
+                <div className="text-sm text-muted-foreground">Currently pursuing</div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
