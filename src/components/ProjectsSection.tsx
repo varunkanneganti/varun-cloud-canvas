@@ -4,23 +4,23 @@ import { useState, useEffect } from "react";
 
 const projects = [
   {
-    title: "Learning Management System API",
-    description: "Built and tested comprehensive REST APIs for a Learning Management System using Java 8, Spring Boot, and MySQL. Implemented clean code principles with proper OOP design patterns and Collections framework.",
-    tech: ["Java 8", "Spring Boot", "MySQL", "JUnit", "Mockito"],
-    features: ["RESTful API design", "Test coverage with JUnit", "Clean code principles", "Relational schema design"],
+    title: "AWS-Powered URL Shortener",
+    description: "Full-stack cloud application with FastAPI backend hosted on EC2 with NGINX reverse proxy, S3+CloudFront frontend, and comprehensive AWS infrastructure including RDS PostgreSQL, ElastiCache Redis, and Cognito authentication.",
+    tech: ["AWS EC2", "FastAPI", "PostgreSQL", "Redis", "S3", "CloudFront", "Cognito", "GitHub Actions"],
+    features: ["CI/CD automation", "HTTPS with custom domain", "User authentication", "Production-grade reliability"],
     stats: { stars: "★", forks: "⑂" },
-    status: "Production",
-    category: "Backend",
+    status: "Live",
+    category: "DevOps",
     image: "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800"
   },
   {
-    title: "AWS Cloud Infrastructure",
-    description: "Designed and implemented scalable cloud infrastructure using AWS services including EC2, Lambda, and RDS. Focused on secure authentication and CI/CD automation best practices.",
-    tech: ["AWS EC2", "Lambda", "RDS", "GitHub Actions", "AWS CodeDeploy"],
-    features: ["Auto-scaling", "Secure authentication", "CI/CD automation", "Cost optimization"],
+    title: "Spring Boot REST APIs",
+    description: "Built and optimized 5+ REST APIs with Spring Boot, improving response times by 30%. Utilized Java 8 features including Streams and Lambdas, working with both SQL and NoSQL databases in an Agile environment.",
+    tech: ["Java 8", "Spring Boot", "MariaDB", "MongoDB", "JUnit", "Mockito", "Maven"],
+    features: ["30% performance improvement", "90%+ test coverage", "Multi-tier architecture", "Agile development"],
     stats: { stars: "★", forks: "⑂" },
-    status: "Development",
-    category: "DevOps",
+    status: "Production",
+    category: "Backend",
     image: "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800"
   },
   {

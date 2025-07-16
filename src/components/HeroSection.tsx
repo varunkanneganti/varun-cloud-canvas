@@ -38,7 +38,7 @@ export const HeroSection = () => {
             
             <p className="text-xl md:text-2xl text-muted-foreground mb-12 font-medium max-w-4xl mx-auto leading-relaxed">
               Building scalable, secure, and production-ready systems with AWS Cloud Infrastructure 
-              and Java backend development. Currently exploring the synergy between product thinking 
+              and Java backend development. Currently working on AWS infrastructure architecture and 
               and robust cloud engineering at{" "}
               <span className="text-primary font-semibold relative">
                 Signitives

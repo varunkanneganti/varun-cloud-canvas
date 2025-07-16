@@ -2,22 +2,22 @@ import { Award, Users, Mic, Trophy } from "lucide-react";
 
 const activities = [
   {
+    icon: Users,
+    title: "Professional Experience",
+    description: "Currently serving as Product Intern at Signitives, leading AWS infrastructure initiatives and cost optimization strategies. Previously worked as Java Intern at Arnisys LLC, developing high-performance REST APIs.",
+    achievement: "Current Role"
+  },
+  {
     icon: Award,
     title: "Certifications",
     description: "Completed Generative AI: Introduction and Applications certification, staying current with emerging technologies and AI applications in software development.",
     achievement: "Certified"
   },
   {
-    icon: Users,
-    title: "Cross-functional Collaboration",
-    description: "Contributing to user-focused digital product development with involvement in user research, agile product cycles, and cross-functional team collaboration.",
-    achievement: "Product Intern"
-  },
-  {
     icon: Trophy,
-    title: "Continuous Learning",
-    description: "Currently diving deeper into AWS services, focusing on scalable backend deployments using EC2, Lambda, and ECS with secure authentication practices.",
-    achievement: "In Progress"
+    title: "Technical Achievements",
+    description: "Achieved 30% performance improvement in REST APIs, 90%+ test coverage, and successfully deployed production-grade AWS infrastructure with zero-downtime CI/CD automation.",
+    achievement: "Proven Results"
   },
   {
     icon: Mic,

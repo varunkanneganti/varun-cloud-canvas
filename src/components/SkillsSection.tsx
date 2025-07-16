@@ -4,28 +4,28 @@ const skillCategories = [
   {
     title: "Cloud & AWS",
     icon: Cloud,
-    skills: ["AWS EC2", "S3", "Lambda", "RDS", "VPC", "IAM", "CloudFront"],
+    skills: ["AWS EC2", "S3", "RDS", "CloudFront", "Route 53", "ACM", "Cognito", "ElastiCache"],
     color: "from-blue-500 to-blue-600",
     level: "Advanced"
   },
   {
     title: "CI/CD & Tools",
     icon: GitBranch,
-    skills: ["GitHub Actions", "AWS CodeDeploy", "Git", "Maven", "IntelliJ", "Postman"],
+    skills: ["GitHub Actions", "NGINX", "systemd", "Git", "Maven", "IntelliJ", "Postman"],
     color: "from-green-500 to-green-600",
     level: "Intermediate"
   },
   {
     title: "Backend Development",
     icon: Server,
-    skills: ["Java 8", "Spring Boot", "Hibernate", "REST APIs", "OOP", "Collections"],
+    skills: ["Java 8", "Spring Boot", "FastAPI", "REST APIs", "Streams & Lambdas", "JUnit"],
     color: "from-purple-500 to-purple-600",
     level: "Advanced"
   },
   {
     title: "Databases & Testing",
     icon: Database,
-    skills: ["MySQL", "PostgreSQL", "MongoDB", "JUnit", "Mockito"],
+    skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "MariaDB", "Mockito"],
     color: "from-orange-500 to-orange-600",
     level: "Intermediate"
   }
