@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { 
+import {
   SiAwsamplify, 
   SiTerraform, 
   SiDocker, 
@@ -12,13 +12,14 @@ import {
   SiGithubactions,
   SiGit,
   SiNginx,
-  SiJava,
   SiPython,
   SiJunit5,
   SiIntellijidea,
   SiPostman,
   SiMaven
 } from "react-icons/si";
+import { FaJava } from "react-icons/fa";
+ from "react-icons/si";
 import { Database, Cloud, Server, GitBranch } from "lucide-react";
 
 const skillCategories = [
