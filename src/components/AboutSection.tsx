@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Calendar, MapPin, GraduationCap, Briefcase, Award, TrendingUp } from "lucide-react";
-import { SiAmazonaws, SiSpringboot, SiFastapi, SiPostgresql } from "react-icons/si";
+import { SiAwsamplify, SiSpringboot, SiFastapi, SiPostgresql } from "react-icons/si";
 
 const milestones = [
   {
