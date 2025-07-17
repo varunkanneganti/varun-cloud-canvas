@@ -296,7 +296,6 @@
   .card-skill {
     @apply card-modern p-6 text-center;
     @apply hover:shadow-xl hover:shadow-primary/5;
-    @apply group;
   }
 
   /* Tech stack styling */
