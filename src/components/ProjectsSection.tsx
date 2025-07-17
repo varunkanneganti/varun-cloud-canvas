@@ -3,7 +3,7 @@ import { ExternalLink, Github, Star, Calendar, Code, Filter, Play } from "lucide
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { 
-  SiAmazonaws, 
+  SiAwsamplify, 
   SiFastapi, 
   SiPostgresql, 
   SiRedis,
@@ -23,13 +23,13 @@ const projects = [
     description: "Production-grade cloud application with comprehensive AWS infrastructure including EC2, S3, RDS, ElastiCache, and Cognito. Features CI/CD automation, HTTPS with custom domain, and enterprise-level security.",
     longDescription: "A full-stack cloud application showcasing modern AWS architecture patterns. Built with FastAPI backend hosted on EC2 with NGINX reverse proxy, PostgreSQL RDS for data persistence, Redis ElastiCache for caching, and S3+CloudFront for frontend hosting. Implements secure user authentication with Amazon Cognito and automated deployments via GitHub Actions.",
     tech: [
-      { name: "AWS EC2", icon: SiAmazonaws, color: "#FF9900" },
+      { name: "AWS EC2", icon: SiAwsamplify, color: "#FF9900" },
       { name: "FastAPI", icon: SiFastapi, color: "#009688" },
       { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
       { name: "Redis", icon: SiRedis, color: "#DC382D" },
-      { name: "S3", icon: SiAmazonaws, color: "#FF9900" },
-      { name: "CloudFront", icon: SiAmazonaws, color: "#FF9900" },
-      { name: "Cognito", icon: SiAmazonaws, color: "#FF9900" },
+      { name: "S3", icon: SiAwsamplify, color: "#FF9900" },
+      { name: "CloudFront", icon: SiAwsamplify, color: "#FF9900" },
+      { name: "Cognito", icon: SiAwsamplify, color: "#FF9900" },
       { name: "GitHub Actions", icon: SiGithubactions, color: "#2088FF" }
     ],
     features: [

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { 
-  SiAmazonaws, 
+  SiAwsamplify, 
   SiTerraform, 
   SiDocker, 
   SiFastapi, 
@@ -22,7 +22,7 @@ const techKeywords = [
 ];
 
 const techIcons = [
-  { Icon: SiAmazonaws, name: "AWS", color: "#FF9900" },
+  { Icon: SiAwsamplify, name: "AWS", color: "#FF9900" },
   { Icon: SiTerraform, name: "Terraform", color: "#7B42BC" },
   { Icon: SiDocker, name: "Docker", color: "#2496ED" },
   { Icon: SiFastapi, name: "FastAPI", color: "#009688" },

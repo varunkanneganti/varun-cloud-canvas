@@ -32,7 +32,7 @@ const milestones = [
 const stats = [
   { label: "Years Experience", value: "2+", icon: TrendingUp },
   { label: "Projects Completed", value: "10+", icon: Award },
-  { label: "AWS Services", value: "15+", icon: SiAmazonaws },
+  { label: "AWS Services", value: "15+", icon: SiAwsamplify },
   { label: "Performance Gain", value: "30%", icon: TrendingUp }
 ];
 

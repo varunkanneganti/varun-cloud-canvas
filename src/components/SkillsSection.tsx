@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { 
-  SiAmazonaws, 
+  SiAwsamplify, 
   SiTerraform, 
   SiDocker, 
   SiFastapi, 
@@ -27,14 +27,14 @@ const skillCategories = [
     icon: Cloud,
     gradient: "from-orange-500 to-red-500",
     skills: [
-      { name: "AWS EC2", icon: SiAmazonaws, level: "proficient", color: "#FF9900" },
-      { name: "S3", icon: SiAmazonaws, level: "proficient", color: "#FF9900" },
-      { name: "RDS", icon: SiAmazonaws, level: "proficient", color: "#FF9900" },
-      { name: "CloudFront", icon: SiAmazonaws, level: "intermediate", color: "#FF9900" },
-      { name: "Route 53", icon: SiAmazonaws, level: "intermediate", color: "#FF9900" },
-      { name: "Cognito", icon: SiAmazonaws, level: "intermediate", color: "#FF9900" },
-      { name: "ElastiCache", icon: SiAmazonaws, level: "intermediate", color: "#FF9900" },
-      { name: "ACM", icon: SiAmazonaws, level: "intermediate", color: "#FF9900" }
+      { name: "AWS EC2", icon: SiAwsamplify, level: "proficient", color: "#FF9900" },
+      { name: "S3", icon: SiAwsamplify, level: "proficient", color: "#FF9900" },
+      { name: "RDS", icon: SiAwsamplify, level: "proficient", color: "#FF9900" },
+      { name: "CloudFront", icon: SiAwsamplify, level: "intermediate", color: "#FF9900" },
+      { name: "Route 53", icon: SiAwsamplify, level: "intermediate", color: "#FF9900" },
+      { name: "Cognito", icon: SiAwsamplify, level: "intermediate", color: "#FF9900" },
+      { name: "ElastiCache", icon: SiAwsamplify, level: "intermediate", color: "#FF9900" },
+      { name: "ACM", icon: SiAwsamplify, level: "intermediate", color: "#FF9900" }
     ]
   },
   {
