@@ -100,7 +100,7 @@ export const AboutSection = () => {
                 <div className="flex items-center gap-4 pt-6 border-t border-border/50">
                   <span className="text-sm font-semibold text-muted-foreground">Core Technologies:</span>
                   <div className="flex items-center gap-3">
-                    <SiAmazonaws className="w-6 h-6 text-[#FF9900]" />
+                    <SiAwsamplify className="w-6 h-6 text-[#FF9900]" />
                     <SiFastapi className="w-6 h-6 text-[#009688]" />
                     <SiSpringboot className="w-6 h-6 text-[#6DB33F]" />
                     <SiPostgresql className="w-6 h-6 text-[#336791]" />
