@@ -19,7 +19,6 @@ import {
   SiMaven
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
- from "react-icons/si";
 import { Database, Cloud, Server, GitBranch } from "lucide-react";
 
 const skillCategories = [
