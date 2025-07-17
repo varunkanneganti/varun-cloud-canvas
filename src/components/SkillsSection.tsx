@@ -228,7 +228,7 @@ export const SkillsSection = () => {
           <div className="text-center">
             <h3 className="text-2xl font-bold text-foreground mb-6">Certifications & Learning</h3>
             <div className="inline-flex items-center gap-4 px-8 py-4 glass-card rounded-2xl">
-              <SiAmazonaws className="w-8 h-8 text-[#FF9900]" />
+              <SiAwsamplify className="w-8 h-8 text-[#FF9900]" />
               <div className="text-left">
                 <div className="font-bold text-foreground">AWS Cloud Practitioner</div>
                 <div className="text-sm text-muted-foreground">Currently pursuing</div>
