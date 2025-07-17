@@ -290,7 +290,7 @@
   .card-project {
     @apply card-modern p-8 cursor-pointer;
     @apply hover:shadow-2xl hover:shadow-primary/10;
-    @apply group overflow-hidden;
+    @apply overflow-hidden;
   }
 
   .card-skill {
