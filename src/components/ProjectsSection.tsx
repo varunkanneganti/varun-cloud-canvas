@@ -10,11 +10,11 @@ import {
   SiGithubactions,
   SiNginx,
   SiSpringboot,
-  SiJava,
   SiMongodb,
   SiMysql,
   SiJunit5
 } from "react-icons/si";
+import { FaJava } from "react-icons/fa";
 
 const projects = [
   {
@@ -57,12 +57,12 @@ const projects = [
     description: "Enterprise-grade Spring Boot APIs with 30% performance improvement and 90%+ test coverage. Built using Java 8 features, multi-tier architecture, and comprehensive testing strategies.",
     longDescription: "A collection of production-ready REST APIs built with Spring Boot, showcasing advanced Java 8 features like Streams and Lambdas. Implements multi-tier architecture with both SQL and NoSQL databases, comprehensive testing with JUnit and Mockito, and follows Agile development practices.",
     tech: [
-      { name: "Java 8", icon: SiJava, color: "#ED8B00" },
+      { name: "Java 8", icon: FaJava, color: "#ED8B00" },
       { name: "Spring Boot", icon: SiSpringboot, color: "#6DB33F" },
       { name: "MariaDB", icon: SiMysql, color: "#003545" },
       { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
       { name: "JUnit", icon: SiJunit5, color: "#25A162" },
-      { name: "Mockito", icon: SiJava, color: "#ED8B00" }
+      { name: "Mockito", icon: FaJava, color: "#ED8B00" }
     ],
     features: [
       "30% response time improvement",
