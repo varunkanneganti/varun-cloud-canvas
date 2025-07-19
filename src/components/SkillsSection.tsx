@@ -16,7 +16,7 @@ import {
   SiJunit5,
   SiIntellijidea,
   SiPostman,
-  SiMaven
+  SiApachemaven
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import { Database, Cloud, Server, GitBranch } from "lucide-react";
@@ -42,12 +42,12 @@ const skillCategories = [
     icon: Server,
     gradient: "from-green-500 to-teal-500",
     skills: [
-      { name: "Java 8", icon: SiJava, level: "proficient", color: "#ED8B00" },
+      { name: "Java 8", icon: FaJava, level: "proficient", color: "#ED8B00" },
       { name: "Spring Boot", icon: SiSpringboot, level: "proficient", color: "#6DB33F" },
       { name: "FastAPI", icon: SiFastapi, level: "proficient", color: "#009688" },
       { name: "REST APIs", icon: Server, level: "proficient", color: "#4F46E5" },
       { name: "JUnit", icon: SiJunit5, level: "intermediate", color: "#25A162" },
-      { name: "Mockito", icon: SiJava, level: "intermediate", color: "#ED8B00" }
+      { name: "Mockito", icon: FaJava, level: "intermediate", color: "#ED8B00" }
     ]
   },
   {
@@ -70,7 +70,7 @@ const skillCategories = [
       { name: "GitHub Actions", icon: SiGithubactions, level: "proficient", color: "#2088FF" },
       { name: "Git", icon: SiGit, level: "proficient", color: "#F05032" },
       { name: "NGINX", icon: SiNginx, level: "intermediate", color: "#009639" },
-      { name: "Maven", icon: SiMaven, level: "intermediate", color: "#C71A36" },
+      { name: "Maven", icon: SiApachemaven, level: "intermediate", color: "#C71A36" },
       { name: "IntelliJ", icon: SiIntellijidea, level: "proficient", color: "#000000" },
       { name: "Postman", icon: SiPostman, level: "proficient", color: "#FF6C37" }
     ]
